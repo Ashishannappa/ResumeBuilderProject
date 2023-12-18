@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="03fb8fd21c054fc09bfc031648dd70d6" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectResumeModel.Education" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectResumeModel.Person" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectResumeModel.Skill" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectResumeModel.WorkExperience" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="ProjectResumeModel.FK__Education__IDPer__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectResumeModel.FK__Skills__IDPerson__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectResumeModel.FK__WorkExper__IDPer__4E88ABD4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

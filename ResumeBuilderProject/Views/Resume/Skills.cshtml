@@ -1,0 +1,44 @@
+﻿
+@model ResumeBuilderProject.EDMXModel.Skill
+
+@{
+    ViewBag.Title = "Skills";
+}
+
+<h2>Skills</h2>
+
+@using (Html.BeginForm("SaveSkills", "Resume", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.IDSki)
+        @Html.TextBoxFor(model => model.IDSki, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IDSki)
+    </div>
+
+
+    <div class="form-group">
+
+
+        @Html.LabelFor(model => model.SkillName)
+        @Html.TextBoxFor(model => model.SkillName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.SkillName)
+        
+    </div>
+
+
+    @*<div class="form-group">
+
+        @Html.LabelFor(model => model.IDPerson)
+        @Html.TextBoxFor(model => model.IDPerson, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IDPerson)
+
+    </div>*@
+
+
+
+    <input type="submit" value="Download" class="btn btn-primary" />
+}
+

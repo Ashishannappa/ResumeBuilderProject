@@ -1,0 +1,59 @@
+﻿
+@model ResumeBuilderProject.EDMXModel.Education
+
+@{
+    ViewBag.Title = "Education";
+}
+
+<h2>Education</h2>
+
+@using (Html.BeginForm("SaveEducation", "Resume", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.IDEdu)
+        @Html.TextBoxFor(model => model.IDEdu, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IDEdu)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.University)
+        @Html.TextBoxFor(model => model.University, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.University)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TitleofDiploma)
+        @Html.TextBoxFor(model => model.TitleofDiploma, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.TitleofDiploma)
+    </div>
+
+    <div class="form-group">
+        @*@Html.Hidden("PersonId", ViewBag.PersonId)*@
+        @Html.LabelFor(model => model.Degree)
+        @Html.TextBoxFor(model => model.Degree, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Degree)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.city)
+        @Html.TextBoxFor(model => model.city, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.city)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.country)
+        @Html.TextBoxFor(model => model.country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.country)
+    </div>
+
+    @*<input type="submit" value="Next" class="btn btn-primary" />*@
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <!-- Replace the submit button with an anchor tag -->
+            @Html.ActionLink("Next", "WorkExperience", "Resume", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+}

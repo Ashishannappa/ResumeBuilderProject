@@ -1,0 +1,67 @@
+﻿@model ResumeBuilderProject.EDMXModel.Person
+
+
+
+@{
+    ViewBag.Title = "PersonalDetails";
+}
+
+<h2>PersonalDetails</h2>
+
+@using (Html.BeginForm("SavePersonalDetails", "Resume", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.FirstName)
+        @Html.TextBoxFor(model => model.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.FirstName)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.LastName)
+        @Html.TextBoxFor(model => model.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.LastName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.DateOFBirth)
+        @Html.TextBoxFor(model => model.DateOFBirth, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.DateOFBirth)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Nationality)
+        @Html.TextBoxFor(model => model.Nationality, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Nationality)
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Address)
+        @Html.TextBoxFor(model => model.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Address)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.Email)
+        @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Email)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.TellNo)
+        @Html.TextBoxFor(model => model.TellNo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.TellNo)
+    </div>
+
+    @*<input type="submit" value="Next" class="btn btn-primary" />
+        <a href="@Url.Action("Education", "Resume")">Next</a>*@
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <!-- Replace the submit button with an anchor tag -->
+            @Html.ActionLink("Next", "Education", "Resume", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+
+}
+

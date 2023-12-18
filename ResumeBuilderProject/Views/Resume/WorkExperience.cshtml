@@ -1,0 +1,61 @@
+﻿@model ResumeBuilderProject.EDMXModel.WorkExperience
+
+@{
+    ViewBag.Title = "Work Experience";
+}
+
+<h2>Work Experience</h2>
+
+@using (Html.BeginForm("SaveWorkExperience", "Resume", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.IDExp)
+        @Html.TextBoxFor(model => model.IDExp, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IDExp)
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.Company)
+        @Html.TextBoxFor(model => model.Company, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Company)
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Title)
+    </div>
+
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.country)
+        @Html.TextBoxFor(model => model.country, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.country)
+    </div>
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.Description)
+        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.Description)
+    </div>
+    <div class="form-group">
+
+        @Html.LabelFor(model => model.IDPerson)
+        @Html.TextBoxFor(model => model.IDPerson, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IDPerson)
+    </div>
+
+    @*<input type="submit" value="Next" class="btn btn-primary" />*@
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <!-- Replace the submit button with an anchor tag -->
+            @Html.ActionLink("Next", "Skills", "Resume", null, new { @class = "btn btn-primary" })
+        </div>
+    </div>
+}
+

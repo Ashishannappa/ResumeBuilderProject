@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Download Resume";
+}
+
+<h2>Download Resume</h2>
+
+<p>
+    Your resume has been successfully submitted. You can now download it in text format.
+</p>
+
+@Html.ActionLink("Download Resume", "DownloadTextResume", "Resume", new { @class = "btn btn-primary" })
+
+
